@@ -158,21 +158,74 @@
 
 // console.log(result); // "Hello World"
 
-let str1 = "listen";
-let str2 = "silent";
+// let str1 = "listen";
+// let str2 = "silent";
 
-if (str1.length !== str2.length) {
-  console.log(false);
-} else {
-  let isAnagram = true;
+// if (str1.length !== str2.length) {
+//   console.log(false);
+// } else {
+//   let isAnagram = true;
 
-  for (let i = 0; i < str2.length; i++) {
-    if (!str1.includes(str2[i])) {
-      isAnagram = false;
-      break;
-    }
+//   for (let i = 0; i < str2.length; i++) {
+//     if (!str1.includes(str2[i])) {
+//       isAnagram = false;
+//       break;
+//     }
+//   }
+
+//   console.log(isAnagram); // true
+// }
+
+
+// let num=15,fact=1;
+// for(let i=1;i<=num;i++) 
+//   fact*=i;
+// console.log(fact);
+
+// let a =0;
+// let b =1;
+// let n = 10;
+
+// for(let i=1;i<=n;i++){
+//  [a+b]= [b,a+b]
+
+// }
+
+//shift zero to end
+
+
+// let a = [1,2,3,0,11,5,0,5];
+// let result = [];
+// let alength = 0;
+// for(let i=0; i<a.length;i++){
+//   if(a[i]!== 0){
+//     result.push(a[i]);
+//   }
+// }
+//  alength = a.length -result.length;
+// for(let j=0; j<alength;j++){
+//   result.push(0)
+// }
+// console.log(result)
+
+// let mat=[[1,2,3],[4,5,6]], t=[];
+// for(let i=0;i<mat[0].length;i++){
+//   t[i]=[];
+//   for(let j=0;j<mat.length;j++) t[i][j]=mat[j][i];
+// }
+// console.log(t);
+
+let arr = [1,2,3]
+
+
+
+for(let i =0; i<arr.length; i++)
+{
+  let newar= [];
+  for(let j=i;j<arr.length;j++){
+    newar.push(arr[i])
+    console.log(newar)
   }
 
-  console.log(isAnagram); // true
 }
 

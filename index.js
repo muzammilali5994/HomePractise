@@ -327,3 +327,27 @@ let input = document.getElementById("inp");
 
 
 
+
+ let inp = document.getElementById("inp");
+  let para = document.getElementById("para");
+
+  // Input event listener
+  inp.addEventListener("input", function() {
+    para.textContent = "sadf"+inp.value;
+  });
+
+  inp.addEventListener("input", function(){
+    inp.classList.add("highlight")
+  })
+
+  // 3️⃣ Highlight on focus, remove on blur
+  inp.addEventListener("focus", function() {
+    inp.classList.add("highlight");
+  });
+
+  inp.addEventListener("blur", function() {
+    inp.classList.remove("highlight");
+  });
+  
+  
+

@@ -351,3 +351,76 @@ let input = document.getElementById("inp");
   
   
 
+let form = document.getElementById("myForm");
+let nameInput = document.getElementById("name");
+let emailInput = document.getElementById("email");
+let emailError = document.getElementById("emailError");
+
+let form = document.getElementById("myForm")
+let nameInput = document.getElementById("name")
+let emailInput = document.getElementById("email")
+let btnSubmit = document.getElementById("button")
+
+
+form.addEventListener("submit",function(e){
+  e.preventDefault();
+
+  let isValid = true;
+
+  if(nameInput.value.trim() === "" ){
+    nameInput.style.border= "2px solid red";
+    isValid = false;
+  }
+  else{
+    nameInput.style.border = "2px solid green"
+  }
+
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(emailInput.value)) {
+    emailInput.style.border = "2px solid red"
+    emailError.innerText = "invalid email";
+    isValid=false
+
+  }
+  else{
+    emailInput.style.border = "2px solid green"
+    emailInput.innerText="";
+  }
+
+  if(isValid){
+    alert("form submited")
+  }
+
+})
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); // form submit rok do
+
+  let isValid = true;
+
+  // Name validation
+  if (nameInput.value.trim() === "") {
+    nameInput.style.border = "2px solid red";
+    isValid = false;
+  } else {
+    nameInput.style.border = "2px solid green";
+  }
+
+  // Email validation
+  let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailPattern.test(emailInput.value)) {
+    emailError.innerText = "Invalid email address";
+    emailInput.style.border = "2px solid red";
+    isValid = false;
+  } else {
+    emailError.innerText = "";
+    emailInput.style.border = "2px solid green";
+  }
+
+  // Final submit
+  if (isValid) {
+    alert("Form Submitted Successfully ✅");
+    form.reset();
+  }
+});

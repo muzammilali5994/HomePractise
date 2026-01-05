@@ -8,3 +8,11 @@
     width: 100px;
     height: 100px;
   }
+  .editable {
+  cursor: pointer;
+}
+
+input.edit-input {
+  width: 100%;
+  font-size: 16px;
+}

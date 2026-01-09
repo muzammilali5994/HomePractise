@@ -745,3 +745,20 @@ console.log(login(12345));
 console.log(login(12345));
 console.log(login(12345));
 console.log(login(1234));
+
+
+ATM Balance Withdraw
+let Balance =100000;
+let dailyLimit = 25000;
+let withdrawalAmount = 1000;
+
+if(withdrawalAmount > dailyLimit){
+    console.log("limite excceed")
+}
+else if(withdrawalAmount > Balance){
+    console.log("amount not availble")
+}
+else{
+    Balance = Balance - withdrawalAmount
+    console.log(Balance)
+}

@@ -762,3 +762,54 @@ else{
     Balance = Balance - withdrawalAmount
     console.log(Balance)
 }
+
+
+function validateEmail(email) {
+  if (
+    email.includes("@") &&
+    email.includes(".") &&
+    email.indexOf("@") < email.lastIndexOf(".")
+  ) {
+    return "Valid Email";
+  } else {
+    return "Invalid Email";
+  }
+}
+
+console.log(validateEmail("test@gmail.com"));
+
+
+
+function checkPassword(pass) {
+  if (pass.length >= 8 && pass.match(/[0-9]/)) {
+    return "Strong Password";
+  } else {
+    return "Weak Password";
+  }
+}
+
+console.log(checkPassword("abc12345"));
+
+
+
+function cleanUsername(name) {
+  return name.trim();
+}
+
+console.log(cleanUsername("   Muzammil Ali   "));
+
+
+
+
+function searchItem(text, keyword) {
+  text = text.toLowerCase();
+  keyword = keyword.toLowerCase();
+
+  if (text.includes(keyword)) {
+    return "Match Found";
+  } else {
+    return "No Match";
+  }
+}
+
+console.log(searchItem("Apple iPhone 15", "iphone"));

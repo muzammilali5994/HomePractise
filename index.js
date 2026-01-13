@@ -823,3 +823,31 @@ input.addEventListener("input",function(){
     span.innerText="@ include hay "
   }
 })
+
+
+
+  let btn = document.getElementById("add");
+  let tablebody = document.getElementById("tbody")
+  btn.addEventListener("click",function(){
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    tablebody.innerHTML += `
+      <tr>
+      <td>${name}</td>
+      <td>${age}</td>
+      <td>
+
+        <button class="del">Delete </button>
+
+      </td>
+      </tr>
+    `;
+
+  })
+
+    
+    tablebody.addEventListener("click",function(e){
+      if (e.target.classList.contains("del")) {
+      e.target.closest("tr").remove();
+      }
+  });

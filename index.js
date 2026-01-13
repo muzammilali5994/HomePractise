@@ -813,3 +813,13 @@ function searchItem(text, keyword) {
 }
 
 console.log(searchItem("Apple iPhone 15", "iphone"));
+
+
+let input = document.getElementById("emailcheck");
+let span = document.getElementById("span")
+input.addEventListener("input",function(){
+  let values =  input.value;
+  if(values.includes("@")  &&  values.includes(".") && values.indexOf("@") < values.lastIndexOf(".")){
+    span.innerText="@ include hay "
+  }
+})

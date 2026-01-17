@@ -851,3 +851,43 @@ input.addEventListener("input",function(){
       e.target.closest("tr").remove();
       }
   });
+
+let scores = {
+  math: 85,
+  eng: 78,
+  cs: 92
+};
+
+document.writeln(Math.max(Object.values(scores)))
+
+let users = [
+  { name: "Ali", active: true },
+  { name: "Ahmed", active: false },
+  { name: "Sara", active: true }
+];
+let users = [
+  { name: "Ali", active: true },
+  { name: "Ahmed", active: false },
+  { name: "Sara", active: true }
+];
+
+// Loop through array
+for (let i = 0; i < users.length; i++) {
+    if (users[i].active) {
+        document.writeln(users[i].name + " is active<br>");
+    }
+}
+let cart = {
+  item: "Mobile",
+  price: 50000,
+  quantity: 2
+};
+
+// Total price calculate
+let totalPrice = cart.price * cart.quantity;
+
+document.writeln("Total Price: " + totalPrice);
+
+
+
+

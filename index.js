@@ -986,16 +986,16 @@ function submitData() {
   let names = document.getElementById("name").value;
   let lastName = document.getElementById("lastName").value;
 
-  // if (editIndex === null) {
-    
-  // } else {
-  //   users[editIndex].name = name;
-  //   users[editIndex].lastName = lastName;
-  //   editIndex = null;
-  // }
-  users.push({ names, lastName });
+  if (editIndex === null) {
+      users.push({ names, lastName });
+  } else {
+    users[editIndex].name = names;
+    users[editIndex].lastName = lastName;
+    editIndex = null;
+  }
+
   renderTable();
-  clearInputs();
+  clearInputs();a
   saveToStorage();
 }
 
@@ -1030,3 +1030,16 @@ function loadFromStorage(){
     renderTable();
 }
 loadFromStorage();
+
+
+function editData(index) {
+  editIndex = index;
+  document.getElementById("name").value = users[index].names;
+  document.getElementById("lastName").value = users[index].lastName;
+}
+
+function deleteData(index) {
+  users.splice(index, 1);
+  renderTable();
+  saveToStorage();
+}

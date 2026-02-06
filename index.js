@@ -888,6 +888,21 @@ let totalPrice = cart.price * cart.quantity;
 
 document.writeln("Total Price: " + totalPrice);
 
+abc={
+  abcd : "adsf"
+}
 
+document.writeln(abc.abcd)
 
+const counter = (function () {
+  let value = 0;
+  return {
+    increment() { value++; },
+    get() { return value; }
+  };
+})();
+
+counter.increment();
+let x = counter.get();
+document.writeln(x)
 

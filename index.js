@@ -978,68 +978,131 @@
 //   document.getElementById("lastName").value = "";
 // }
 
-let users = [];
+// let users = [];
 
-let editIndex = null;
+// let editIndex = null;
 
-function submitData() {
-  let names = document.getElementById("name").value;
-  let lastName = document.getElementById("lastName").value;
+// function submitData() {
+//   let names = document.getElementById("name").value;
+//   let lastName = document.getElementById("lastName").value;
 
-  if (editIndex === null) {
-      users.push({ names, lastName });
-  } else {
-    users[editIndex].name = names;
-    users[editIndex].lastName = lastName;
-    editIndex = null;
-  }
+//   if (editIndex === null) {
+//       users.push({ names, lastName });
+//   } else {
+//     users[editIndex].name = names;
+//     users[editIndex].lastName = lastName;
+//     editIndex = null;
+//   }
 
-  renderTable();
-  clearInputs();a
-  saveToStorage();
-}
+//   renderTable();
+//   clearInputs();a
+//   saveToStorage();
+// }
 
-function renderTable(){
-  let table = document.getElementById("table");
-  table.innerHTML = "";
+// function renderTable(){
+//   let table = document.getElementById("table");
+//   table.innerHTML = "";
   
-  users.forEach((user,index) => {
-    table.innerHTML +=
-    `
-  <td>${user.names}</td>
-  <td>${user.lastName}</td>
-  <td><button onClick ="editData(${index})">Edit</button></td>
-  <td><button onClick ="deleteData(${index})">Delete</button></td>
+//   users.forEach((user,index) => {
+//     table.innerHTML +=
+//     `
+//   <td>${user.names}</td>
+//   <td>${user.lastName}</td>
+//   <td><button onClick ="editData(${index})">Edit</button></td>
+//   <td><button onClick ="deleteData(${index})">Delete</button></td>
     
-    `;
-  });
+//     `;
+//   });
 
-}
-function clearInputs(){
-   document.getElementById("name").value="";
-   document.getElementById("lastName").value="";
-}
+// }
+// function clearInputs(){
+//    document.getElementById("name").value="";
+//    document.getElementById("lastName").value="";
+// }
 
-function saveToStorage(){
-  localStorage.setItem("users",JSON.stringify(users));
-}
-function loadFromStorage(){
-  let data = localStorage.getItem("users");
+// function saveToStorage(){
+//   localStorage.setItem("users",JSON.stringify(users));
+// }
+// function loadFromStorage(){
+//   let data = localStorage.getItem("users");
 
-  users = JSON.parse(data);
-    renderTable();
-}
-loadFromStorage();
+//   users = JSON.parse(data);
+//     renderTable();
+// }
+// loadFromStorage();
 
 
-function editData(index) {
-  editIndex = index;
-  document.getElementById("name").value = users[index].names;
-  document.getElementById("lastName").value = users[index].lastName;
-}
+// function editData(index) {
+//   editIndex = index;
+//   document.getElementById("name").value = users[index].names;
+//   document.getElementById("lastName").value = users[index].lastName;
+// }
 
-function deleteData(index) {
-  users.splice(index, 1);
-  renderTable();
-  saveToStorage();
-}
+// function deleteData(index) {
+//   users.splice(index, 1);
+//   renderTable();
+//   saveToStorage();
+// }
+
+// let arr = [];
+// let editIndex = null;
+
+// function submitData(){
+//   let name = document.getElementById("name").value;
+//   let lastName = document.getElementById("lastName").value;
+
+//   if(editIndex === null)
+//   {
+//     arr.push({name,lastName});
+//   }
+//   else{
+//     arr[editIndex].name = name;
+//     arr[editIndex].lastName = lastName;
+//     editIndex = null;
+//   }
+
+//   saveTable();
+//   //saveStorage();
+//   clearField();
+
+// }
+// function saveTable(){
+//   let table = document.getElementById("table");
+//   table.innerHTML = "";
+
+//   arr.forEach((item,index)=>{
+//     table.innerHTML +=
+//     `
+//       <tr>
+//         <td>${item.name}</td>
+//         <td>${item.lastName}</td>
+//         <td><button onclick="editData(${index})">Edit</button></td>
+//         <td><button onclick="deleteData(${index})">Delete</button></td>
+//       </tr>
+//     `;
+//   });
+
+// }
+// function clearField(){
+//   document.getElementById("name").value ="";
+//   document.getElementById("lastName").value ="";
+// }
+
+// function editData(index){
+//   editIndex = index;
+//   document.getElementById("name").value = arr[index].name;
+//   document.getElementById("lastName").value = arr[index].lastName;
+// }
+
+
+
+let c = ["adsf",45,true,"asdfwer","asdfadf"]
+
+const cars = [];
+cars[0]= "BMWe";
+cars[1]= "BMWd";
+cars[2]= "BMWa";
+
+document.writeln(cars.pop())
+document.writeln("======")
+document.writeln(cars)

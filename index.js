@@ -1096,13 +1096,13 @@
 
 
 
-let c = ["adsf",45,true,"asdfwer","asdfadf"]
 
-const cars = [];
-cars[0]= "BMWe";
-cars[1]= "BMWd";
-cars[2]= "BMWa";
 
-document.writeln(cars.pop())
-document.writeln("======")
-document.writeln(cars)
+
+
+
+let a= 1
+
+for(let i =0; i<=50; i++){
+    document.writeln(a++ +"<br>")
+}
